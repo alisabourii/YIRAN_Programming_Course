@@ -17,6 +17,7 @@ function checkTime(i) {
 function topla(){
         let say1 = parseInt(document.getElementById("num1").value);
         let say2 = parseInt(document.getElementById("num2").value);
+        let test = "Test"
         const islem = `${say1}+${say2} =`;
         document.getElementById("sonuc").value = islem+ (say1+say2);
 }
