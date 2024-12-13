@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="tahsilat" placeholder="education level" /><br />
+    <input type="text" id="zaban" placeholder="english language level" /><br />
+    <input type="number" id="kar" placeholder="work history" /><br />
+    <button onclick="employment()">control</button><br />
+    <input type="number" id="result" placeholder="result" />
+    <script>
+      function employment() {
+        var tahsilat = document.getElementById("tahsilat").value;
+        var zaban = document.getElementById("zaban").value;
+        var kar = parseInt(document.getElementById("kar").value);
+
+        /*if (
+          (tahsilat == "diploma" && zaban == "A1" && kar <= "5") ||
+          (tahsilat == "diploma" && zaban == "A2" && kar <= "5")
+        ) {
+          alert("10 score");
+        }
+        if (
+          (tahsilat == "lisans" && zaban == "B1" && kar >= "6") ||
+          (tahsilat == "lisans" && zaban == "B2" && kar >= "6")
+        ) {
+          alert("20 score");
+        } else {
+          alert("sorry,your score is not enough");
+        }*/
+
+        let result = 0;
+
+        if(tahsilat == "diploma" && kar <= 5 && zaban == "A1" || zaban == "A2" ){
+          result = 10;
+        }
+        else if (tahsilat == "lisans" && kar > 5 && zaban == "B1" || zaban == "B2"){
+          result = 20;
+        }
+        else{
+          result = 0;
+        }
+        document.getElementById("result").value = result;
+      }
+    </script>
+  </body>
+</html>
