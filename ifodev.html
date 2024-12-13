@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="number" id="age" placeholder="age" /><br />
+    <input type="text" id="salamati" placeholder="salamati yes or no" /><br />
+    <button onclick="control()">control</button>
+    <script>
+      function control() {
+        var age = document.getElementById("age").value;
+        var salamati = document.getElementById("salamati").value;
+        if (age >= "18" && salamati == "yes") {
+          alert("ok,you can");
+        } else {
+          alert("you can not");
+        }
+      }
+    </script>
+  </body>
+</html>
