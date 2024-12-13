@@ -1,27 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+    <title>Mode Toggle</title>
 </head>
 <body>
-                <h1>Choice Light Or Dark Mode?</h1>
-                <input type="radio" name="rd" id="rd1"> <label for="">Light</label>
-                <input type="radio" name="rd" id="rd2"> <label for="">Dark</label>
-                <button onclick="setMode()">Set</button>
-        
-        <script>
-                function setMode(){
-                        if(document.getElementById("rd1").checked){
-                                document.getElementsByTagName("body")[0].style.backgroundColor = "white";
-                                document.getElementsByTagName("body")[0].style.color = "black";
-                        }
-                        else{
-                                document.getElementsByTagName("body")[0].style.backgroundColor = "black";
-                                document.getElementsByTagName("body")[0].style.color = "white";
-                        }
-                }
-        </script>
+    <label>
+        <input type="radio" name="mode" id="lightMode" onclick="setMode(this)"> Light Mode
+    </label>
+    <label>
+        <input type="radio" name="mode" id="darkMode" onclick="setMode(this)"> Dark Mode
+    </label>
+
+    <script>
+        function setMode(radio) {
+            if (radio.id === "lightMode") {
+                document.body.style.backgroundColor = "white";
+                document.body.style.color = "black";
+            } else if (radio.id === "darkMode") {
+                document.body.style.backgroundColor = "black";
+                document.body.style.color = "white";
+            }
+        }
+    </script>
 </body>
 </html>
