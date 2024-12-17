@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>age</h3>
+    <label>
+      <input type="radio" name="age" id="25" onclick="result(this)" />25 <br />
+    </label>
+    <label
+      ><input type="radio" name="age" id="30" onclick="result(this)" />30 <br />
+    </label>
+    <label>
+      <input type="radio" name="age" id="35" onclick="result(this)" />35more <br
+    /></label>
+
+    <input type="text" id="result" placeholder="result" />
+    <script>
+      var rst = "";
+      function result(radio) {
+        if (radio.id === "25") {
+          rst = "lisans";
+        }
+        else if (radio.id === "30") {
+          rst = "master";
+        }
+        else if (radio.id === "35") {
+          rst = "phd";
+        }
+        document.getElementById("result").value = rst;
+      }
+    </script>
+  </body>
+</html>
