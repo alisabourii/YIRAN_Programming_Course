@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+</head>
+<body>
+        <h1 id="ort"></h1>
+        <script>
+                var matematik=[60,90,100];
+                var tarih=[80,80];
+                var fizik=[100,90,75];
+
+                var moadelMAT = (matematik[0]+matematik[1]+matematik[2])/matematik.length;
+                var moadelTar = (tarih[0]+tarih[1])/tarih.length;
+                var moadelFiz = (fizik[0]+fizik[1]+fizik[2])/fizik.length;
+
+                console.log("MAT: "+moadelMAT);
+                console.log("Tarih: "+moadelTar);
+                console.log("Fizik: "+moadelFiz);
+
+                var avrage = (moadelFiz+moadelMAT+moadelTar)/3
+
+                console.log(['a', 'b', 'c'].join('-'));
+
+                document.getElementById("ort").innerHTML = avrage;
+
+
+                [1, 2, 3].push(4); // [1, 2, 3, 4]
+                [1, 2, 3].pop(); // [1, 2]
+                [1, 2, 3].shift(); // [2, 3]
+                [1, 2, 3].unshift(0); // [0, 1, 2, 3]
+                ['a', 'b'].concat('c'); // ['a', 'b', 'c']
+                ['a', 'b', 'c'].join('-'); // a-b-c
+                ['a', 'b', 'c'].slice(1); // ['b', 'c']
+                ['a', 'b', 'c'].indexOf('b'); // 1
+                ['a', 'b', 'c'].includes('c'); // true
+                [3, 5, 6, 8].find((n) => n % 2 === 0); // 6
+                [2, 4, 3, 5].findIndex((n) => n % 2 !== 0); // 2
+                [3, 4, 8, 6].map((n) => n * 2); // [6, 8, 16, 12]
+                [1, 4, 7, 8].filter((n) => n % 2 === 0); // [4, 8]
+                [2, 4, 3, 7].reduce((acc, cur) => acc + cur); // 16
+                [2, 3, 4, 5].every((x) => x < 6); // true
+                [3, 5, 6, 8].some((n) => n > 6); // true
+                [1, 2, 3, 4].reverse(); // [4, 3, 2, 1]
+                [3, 5, 7, 8].at(-2); // 7
+
+        </script>
+</body>
+</html>
