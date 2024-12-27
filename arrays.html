@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+</head>
+<button onclick="sortArr()">Sort</button>
+<button onclick="reverseArr()">Reverse</button>
+<button onclick="SortReverseArr()">Sort&Reverse</button>
+<button onclick="popArr()">POP</button><br>
+
+<input type="text" id="whatisIDX">
+<button onclick="serachIDX()">Search</button>
+
+<h1 id="array"></h1>
+<h1 id="array2"></h1>
+
+<body>
+        <script>
+                var city = ["İzmir", "İstanbul", "Ankara", "Bursa", "Ordu"];
+                var plak = [77,34,12,81,52,66];
+                
+                document.getElementById("array").innerHTML = city;
+                document.getElementById("array2").innerHTML = plak;
+
+                function sortArr(){
+                        city.sort();
+                        plak.sort();
+                        console.log(city.length);
+                        console.log(city);
+
+                        console.log(plak.length);
+                        console.log(plak);
+
+                        document.getElementById("array").innerHTML = city;
+                        document.getElementById("array2").innerHTML = plak;
+                }
+
+                function reverseArr(){
+                        city.reverse();
+                        plak.reverse()
+
+                        document.getElementById("array").innerHTML = city;
+                        document.getElementById("array2").innerHTML = plak;
+                }
+
+                function SortReverseArr(){
+                        city.sort();
+                        plak.sort();
+                        city.reverse();
+                        plak.reverse();
+
+                        document.getElementById("array").innerHTML = city;
+                        document.getElementById("array2").innerHTML = plak;
+                }
+
+                function popArr(){
+                        city.pop()
+                        plak.pop()
+
+                        document.getElementById("array").innerHTML = city;
+                        document.getElementById("array2").innerHTML = plak;
+                }
+
+                function serachIDX(){
+                        alert(city.indexOf(document.getElementById("whatisIDX").value));
+                }
+
+        </script>
+</body>
+</html>
