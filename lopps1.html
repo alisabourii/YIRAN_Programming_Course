@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+                div{
+                width:20px; height:20px; border:2px solid gray;
+                margin:2px; text-align:center; float:left; }
+        </style>
+</head>
+<body>
+        <!--<button onclick="btnAdd()">+</button>
+        <h1 id="number">0</h1>
+        <button onclick="btnRe()">-</button> -->
+        <script>
+                var counter = 0
+                function btnAdd(){
+                        counter += 3;
+                        document.getElementById("number").innerText = counter;
+                }
+                function btnRe(){
+                        counter -= 2;
+                        document.getElementById("number").innerText = counter;
+                }
+        </script>
+
+        <!--<div>1</div> <div>2</div> <div>3</div> <div>4</div>
+        <div>5</div> <div>6</div> <div>7</div> <div>8</div>
+        <button onclick="getColor()" >Get Color</button> 
+
+        <script>
+                function getColor(){
+                        var colors = ["blue","red","green","yellow","pink","gray","orange","white"];
+                        var rnd = 0;
+                        for(var i=0; i<8; i++){
+                                rnd = Math.floor(Math.random() * 8);// 
+                                document.getElementsByTagName("div")[i].style.backgroundColor = colors[rnd];
+                        }
+                }
+        </script> -->
+
+        <h1 id="mylist"></h1>
+        <button onclick="found25()">-25</button>
+        <button onclick="found45()">+40</button>
+        <h2 id="rslt">Result: 0</h2>
+        <script>
+                var ages = [18,20,15,30,32,45,65,85,23,44, 100];
+                document.getElementById("mylist").innerText = "["+ages+"]";
+
+                var result = 0;
+
+                function found25(){
+                        result = 0;
+                        for(var i=0; i<ages.length; i++){
+                                if(ages[i] < 25)
+                                        result ++;
+                        }
+                        
+                        document.getElementById("rslt").innerText = "Result: "+result;
+                }
+                function found45(){
+                        result = 0;
+                        for(var i=0; i<ages.length; i++){
+                                if(ages[i] > 40)
+                                        result ++;
+                        }
+                        document.getElementById("rslt").innerText = "Result: "+result;
+                        
+                }
+                
+
+        </script>
+
+        
+</body>
+</html>
