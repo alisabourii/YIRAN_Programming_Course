@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+</head>
+<body>
+        <input type="text" id="userID" placeholder="write Name">
+        <button onclick="foundUser()">Found</button>
+
+        <script>
+                var users = Array("ali","mamad","hossien","aaa","bbb");
+                function foundUser(){
+                        var found = "";
+                        for(var i=0; i<users.length; i++){
+                                if(users[i] === document.getElementById('userID').value){
+                                        found = "Founded, INDEX IS:"+i;
+                                        break;
+                                }
+                        }
+                        
+                        if(found != ""){
+                                alert(found);
+                        }else{
+                                alert("No:"+document.getElementById('userID').value);
+                        }
+                
+                document.getElementById("userID").value = "";
+                }
+        </script>
+</body>
+</html>
