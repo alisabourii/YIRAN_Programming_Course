@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+</head>
+<body>
+        <h1 id="screen"></h1>
+
+        <button onclick="startMelodi()">Start</button>
+        <button onclick="stopMelodi()">Stop</button>
+        <script>
+                /*var counter = 10;
+                var a = setInterval(function(){
+                        counter --;
+                        document.getElementById("screen").innerText = counter;
+                        if(counter == 0){
+                                clearInterval(a);
+                        }
+                }, 1000);*/
+                var metronom;
+                function startMelodi(){
+                        var nots = ["do","re","mi","fa","sol","la","si"];
+                        metronom = setInterval(()=>{
+                                var rnd = Math.floor(Math.random() * 7);
+                                document.getElementById('screen').innerHTML += nots[rnd]+"_";
+                        },1000);
+                }
+                function stopMelodi(){
+                        clearInterval(metronom);
+                }
+        </script>
+</body>
+</html>
