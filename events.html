@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+                .change{
+                        width: 100px;
+                        height: 200px;
+                        background-color: red;
+                        margin-top: 5%;
+                }
+              
+        </style>
+</head>
+<body>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+                $(document).ready(function(){
+                        let changeColor = true;
+
+                        $("#change").dblclick(function(){
+                        if(changeColor){
+                        $("#change").css("background-color","blue"); changeColor = false;}
+                        else{
+                                $("#change").css("background-color","red"); changeColor = true;   
+                        }
+
+                        });
+
+                $("#p1").mouseenter(function(){
+                                $("#p1").css("background-color","yellow");
+                        })
+                $("#p1").mouseleave(function(){
+                        $("#p1").css("background-color","red");
+                        });
+
+                /*$("#p2").mousedown(function(){
+                        alert("Mouse down over p2!");
+                        });*/
+               /* $("#p2").mouseup(function(){
+                        alert("Mouse UP over p2!");
+                        });
+
+                $("#p2").hover(function(){
+                                alert("TEST");
+                        })*/
+                $("input").keyup(function(e){
+                        if(e.keyCode == 13){
+                        $(this).css("background-color", "green");}
+                        });
+
+                                        
+        })
+                
+               
+        </script>
+        <div class="change" id="change">
+        </div>
+        
+        <div class="change" id="p1"></div>
+
+        <div class="change" id="p2"></div>
+
+        <input type="text" name="" id="">
+</body>
+</html>
