@@ -3,7 +3,7 @@
 <head>
 <style>
         .div1{
-                width: 20%;
+                width: 30%;
                 height: 100%;
                 background-color: orange;
                 float: left;
@@ -13,23 +13,27 @@
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script>
+  var items = [];
 $(document).ready(function(){
   $("p").click(function(){
-    $(this).hide();
+    var item = $(this).text();
+    $(this).remove();
+    $("#div2").append("<li>"+item+"</li>");
   });
 });
+
 </script>
 </head>
 <body>
 
 <div class="div1">
-        <h1>We want</h1>
+        <h1>TODO LIST</h1>
   <p>If you click on me, I will disappear.</p>
   <p>Click me away!</p>
   <p>Click me too!</p>
 </div>
-<div class="div1">
-<h1>You can</h1>
+<div class="div1" id="div2">
+<h1>CHECKED</h1>
 </div>
 </body>
 </html>
