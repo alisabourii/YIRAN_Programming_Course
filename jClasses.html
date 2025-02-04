@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .important {
+        font-weight: bold;
+        font-size: xx-large;
+      }
+      .blue {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>This is H1</h1>
+      <h2>This is H2</h2>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam praesentium fuga nesciunt ex laborum repellendus magnam culpa nostrum voluptas numquam ab sit sed pariatur, quisquam modi error suscipit tempora. Accusantium?
+      </p>
+    </div>
+    <button id="change">change</button>
+    <button id="back">Back</button>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(() => {
+        $("#change").click(() => {
+          $("h1,h2,p").addClass("blue");
+        });
+        $('#change').dblclick(()=>{
+                $('div').addClass('important');
+        })
+
+        $('#back').click(()=>{
+                $("h1,h2,p").removeClass("blue");
+        })
+        $('#back').dblclick(()=>{
+                $('div').removeClass('important');
+        })
+      });
+    </script>
+  </body>
+</html>
